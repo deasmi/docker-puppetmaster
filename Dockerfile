@@ -1,23 +1,14 @@
-FROM centos:centos6
+FROM centos:centos7
 
-MAINTAINER nmcspadden@gmail.com
+MAINTAINER dean@zelotus.com
 
-ENV PUPPET_VERSION 3.7.4
+ENV PUPPET_VERSION 3.8.7-1
 
-RUN rpm --import https://yum.puppetlabs.com/RPM-GPG-KEY-puppetlabs && rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-6.noarch.rpm
+RUN rpm --import https://yum.puppetlabs.com/RPM-GPG-KEY-puppetlabs && rpm -ivh http://yum.puppetlabs.com/puppetlabs-release-el-7.noarch.rpm
 RUN yum install -y yum-utils && yum-config-manager --enable centosplus >& /dev/null
 RUN yum install -y puppet-$PUPPET_VERSION
 RUN yum install -y puppet-server-$PUPPET_VERSION
 RUN yum clean all
-ADD puppet.conf /etc/puppet/puppet.conf
-
-VOLUME ["/opt/puppet"]
-
-RUN cp -rf /etc/puppet/* /opt/puppet/
-
-VOLUME ["/opt/varpuppet/lib/puppet"]
-
-RUN cp -rf /var/lib/puppet/* /opt/varpuppet/lib/puppet/
 
 EXPOSE 8140
 
