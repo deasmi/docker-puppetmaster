@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>puppetmaster</Name>
+  <Repository>deasmi/docker-puppetmaster</Repository>
+  <Registry>https://hub.docker.com/r/deasmi/docker-puppetmaster/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Overview>Simple puppet master docker based on Centos7
+Also includes perl as I use perl to run some puppet master scripts as part of catalog creation
+</Overview>
+  <Category>Tools: Network:Management</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://gitlab.in2p3.fr/uploads/group/avatar/129/puppet.png</Icon>
+  <ExtraParams/>
+  <DateInstalled>1499079848</DateInstalled>
+  <Description>Simple puppet master docker based on Centos7&#xD;
+Also includes perl as I use perl to run some puppet master scripts as part of catalog creation&#xD;
+</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8140</HostPort>
+        <ContainerPort>8140</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/resources/puppet/conf/</HostDir>
+      <ContainerDir>/etc/puppet</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/resources/puppet/ssl/</HostDir>
+      <ContainerDir>/etc/puppet/ssl</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Config Name="Host Port 1" Target="8140" Default="" Mode="tcp" Description="Container Port: 8140" Type="Port" Display="always" Required="false" Mask="false">8140</Config>
+  <Config Name="Host Path 1" Target="/etc/puppet" Default="" Mode="rw" Description="Container Path: /etc/puppet" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/resources/puppet/conf/</Config>
+  <Config Name="Host Path 2" Target="/etc/puppet/ssl" Default="" Mode="rw" Description="Container Path: /etc/puppet/ssl" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/resources/puppet/ssl/</Config>
+</Container>
