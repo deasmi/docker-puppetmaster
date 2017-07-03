@@ -9,6 +9,7 @@ RUN yum install -y yum-utils && yum-config-manager --enable centosplus >& /dev/n
 RUN yum install -y puppet
 RUN yum install -y puppet-server
 RUN yum install -y perl
+RUN yum install -y rubygem-puppet-lint
 RUN yum clean all
 
 EXPOSE 8140
