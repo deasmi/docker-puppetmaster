@@ -6,9 +6,11 @@
   <Network>bridge</Network>
   <MyIP/>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://forums.lime-technology.com/topic/58535-puppetmaster-docker-container/</Support>
+  <Project>http://www.puppet.com/</project>
   <Overview>Simple puppet master docker based on Centos7
-Also includes perl as I use perl to run some puppet master scripts as part of catalog creation
+  Also includes perl as I use perl to run some puppet master scripts as part of catalog creation
+  This is version 3 of puppet.
 </Overview>
   <Category>Tools: Network:Management</Category>
   <WebUI/>
