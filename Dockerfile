@@ -10,6 +10,7 @@ RUN yum install -y puppet
 RUN yum install -y puppet-server
 RUN yum install -y perl
 RUN yum install -y rubygem-puppet-lint
+RUN yum install -y git
 RUN yum clean all
 
 EXPOSE 8140
