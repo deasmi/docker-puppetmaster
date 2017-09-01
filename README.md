@@ -1,6 +1,6 @@
 # docker-puppetmaster
 Docker image for puppet server v5 designed to run on unraid
-If you want the 3.5 version please use docker-puppetmaster:v3.5.8 tag
+If you want the 3.5 version please use docker-puppetmaster:v3.5.7 tag
 
 This is super basic, you have to map /etc/puppet and /etc/puppet/ssl as the confdir and ssl dir
 
