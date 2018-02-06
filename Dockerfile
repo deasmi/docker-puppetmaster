@@ -13,6 +13,7 @@ RUN yum install -y perl
 RUN yum install -y centos-release-scl centos-release-scl-rh
 RUN yum install -y git19
 RUN yum clean all
+COPY bashrc /home/puppet/.bashrc
 
 EXPOSE 8140
 
