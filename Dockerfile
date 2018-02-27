@@ -11,9 +11,6 @@ RUN yum install -y yum-utils && yum-config-manager --enable centosplus >& /dev/n
 RUN yum install -y puppetserver
 RUN /opt/puppetlabs/puppet/bin/gem install r10k
 RUN yum install -y perl
-RUN yum install -y centos-release-scl centos-release-scl-rh
-COPY enablegit19.sh /etc/profile.d/enablegit19.sh
-RUN yum install -y git19
 RUN yum clean all
 COPY bashrc /home/puppet/.bashrc
 
