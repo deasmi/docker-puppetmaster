@@ -39,6 +39,11 @@ Also includes perl as I use perl to run some puppet master scripts as part of ca
         <ContainerPort>8140</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>8081</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
     </Publish>
   </Networking>
   <Data>
@@ -60,7 +65,8 @@ Also includes perl as I use perl to run some puppet master scripts as part of ca
   </Data>
   <Environment/>
 
-<Config Name="Host Port 1" Target="8140" Default="" Mode="tcp" Description="Container Port: 8140" Type="Port" Display="always" Required="false" Mask="false">8140</Config>
+  <Config Name="Host Port 1" Target="8140" Default="" Mode="tcp" Description="Container Port: 8140" Type="Port" Display="always" Required="false" Mask="false">8140</Config>
+  <Config Name="Host Port 2" Target="8081" Default="" Mode="tcp" Description="Container Port: 8081" Type="Port" Display="always" Required="false" Mask="false">8081</Config>
   <Config Name="confdir" Target="/etc/puppetlabs/puppet" Default="" Mode="rw" Description="Container Path: /etc/puppetlabs/puppet" Type="Path" Display="always" Required="false" Mask="false">/yourpuppet/conf</Config>
   <Config Name="ssldir" Target="/etc/puppetlabs/puppet/ssl" Default="" Mode="rw" Description="Container Path: /etc/puppetlabs/puppet/ssl" Type="Path" Display="always" Required="false" Mask="false">/yourpuppet/ssl/</Config>
   <Config Name="coded" Target="/etc/puppetlabs/code" Default="" Mode="rw" Description="Container Path: /etc/puppetlabs/code" Type="Path" Display="always" Required="false" Mask="false">/yourpuppet/conf/code</Config>
