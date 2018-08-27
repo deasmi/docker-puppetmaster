@@ -14,6 +14,6 @@ RUN yum install -y perl
 RUN yum clean all
 COPY bashrc /home/puppet/.bashrc
 
-EXPOSE 8140
+EXPOSE 8140 8081
 
 ENTRYPOINT [ "/opt/puppetlabs/bin/puppetserver", "foreground"]
