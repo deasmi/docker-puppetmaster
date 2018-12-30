@@ -13,6 +13,8 @@ RUN /opt/puppetlabs/puppet/bin/gem install r10k
 RUN yum install -y perl
 RUN yum clean all
 COPY bashrc /home/puppet/.bashrc
+COPY puppetserver.defaults /etc/sysconfig/puppetserver
+COPY puppetdb.defaults /etc/sysconfig/puppetdb
 
 EXPOSE 8140 8081
 
