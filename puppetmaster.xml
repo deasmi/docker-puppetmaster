@@ -25,7 +25,7 @@
   <Category>Tools: Network:Management</Category>
   <WebUI/>
   <TemplateURL>https://raw.githubusercontent.com/deasmi/docker-puppetmaster/master/puppetmaster.xml</TemplateURL>
-  <Icon>https://gitlab.in2p3.fr/uploads/group/avatar/129/puppet.png</Icon>
+  <Icon>https://raw.githubusercontent.com/deasmi/docker-puppetmaster/master/logo.png</Icon>
   <ExtraParams/>
   <DateInstalled>1499079848</DateInstalled>
   <Description>Simple puppet master docker based on Centos7&#xD;
